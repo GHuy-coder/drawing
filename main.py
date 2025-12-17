@@ -5,12 +5,11 @@ import os
 current_img_path = None
 
 def upd_meme():
-    
-
+    global lst
+    chon_anh(lst.value)
     draw.text(
         0,0, textbox.value, color= combo.value, font= group.value, size= slide.value
     )
-
 def load_img():
     
     img_file = []
@@ -20,7 +19,6 @@ def load_img():
     return img_file
 def chon_anh(selected_img):
     draw.clear()
-
     global current_img_path
     current_img_path =f"birds/{selected_img}"
 
@@ -32,6 +30,7 @@ def chon_anh(selected_img):
 
 app = App(title="APP", width=900, height=820)
 box = Box(app, layout="grid", width=450, height=250, border=True)
+box.bg = ""
 Text(box, text="Enter text: ", size =15, grid=[0,0])
 textbox = TextBox(box, width=25, grid=[1,0])
 textbox.text_size = 15
@@ -45,6 +44,7 @@ group.text_size = 15
 group.bg = "#F2CD5D"
 Text(box, text="Text Size: ", size =15, grid=[0,3])
 slide = Slider(box, start=10,end= 100, width=250, grid=[1,3])
+
 
 push = PushButton(app, text="Update", width=6, command=upd_meme)
 push.text_size = 15
