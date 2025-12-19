@@ -39,6 +39,10 @@ def dchuyen():
     draw.text(
         x,y, chu.value, color= mau.value, font= phong.value, size= co.value
     )
+    if meme.value == 'square':
+        draw.rectangle(50,50,120,120,color=mau.value)
+
+    
     
 
 app = App(title="APP", width=900, height=900)
@@ -63,8 +67,8 @@ Text(ano_box, text="X", grid=[0,1])
 Text(ano_box, text="Y", grid=[0,2])
 meme = Combo(ano_box, options=["star", "square", "triangle"], grid=[1,0])
 meme.text_size= 13
-S_x = Slider(ano_box, start=0, end=450, width=200, grid=[1,1], command=dchuyen)
-S_y = Slider(ano_box, start=0, end=450, width=200, grid=[1,2], command=dchuyen)
+S_x = Slider(ano_box, start=0, end=430, width=200, grid=[1,1], command=dchuyen)
+S_y = Slider(ano_box, start=0, end=430, width=200, grid=[1,2], command=dchuyen)
 
 
 
