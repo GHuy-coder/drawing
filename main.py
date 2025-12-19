@@ -70,9 +70,6 @@ meme.text_size= 13
 S_x = Slider(ano_box, start=0, end=430, width=200, grid=[1,1], command=dchuyen)
 S_y = Slider(ano_box, start=0, end=430, width=200, grid=[1,2], command=dchuyen)
 
-
-
-
 push = PushButton(app, text="Update", width=6, command=upd_meme)
 push.text_size = 15
 push.bg="#FF00FF"
